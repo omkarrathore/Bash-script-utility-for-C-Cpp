@@ -27,7 +27,7 @@
 
 *** To run C/C++ file use
 
-* Crun fileName.extn   # replace extn with c or cpp 
+* Crun fileName.extn   # replace extn with c or cpp or java
 
 *** To run bash script file use
 
