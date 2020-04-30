@@ -6,12 +6,13 @@ if [ $# -ne 0 ]
       	   if [ $1 == '-h' ] || [ $1 == '--help' ] || [ $1 == '-help' ] || [ $1 == '--h' ] 
 		then
 			echo -e "\nCommand usage : Cvim file_name [-option]"
-			echo -e "\n\toption : -cp/-h/sh/-c"
-			echo -e "\tUse -cp To create new xyz_file.cpp file"
+			echo -e "\n\toption : -cpp/-h/-sh/-c"
+			echo -e "\tUse -cpp To create new xyz_file.cpp file"
 			echo -e "\tUse -c To create new xyz_file.c file"
 			echo -e "\tUse -h To create new xyz_file.h file"
-			echo -e "\tUse -sh To create new xyz_file(bash_script) file"
-			echo -e "\tTry and run 'Cvim hello -cp' "
+			echo -e "\tUse -java To create new xyz_file.java file"
+			echo -e "\tUse -sh To create new xyz_file.sh(bash_script) file"
+			echo -e "\tTry and run 'Cvim hello -cpp' "
 			echo -e "\n\tFor normal editing a file use --> 'Cvim file_name'"
 			exit
 			fi
@@ -38,7 +39,8 @@ if [ "$2" != "" ]
                 echo -e '#********************************************************' >> $1
 		vim $1
     #Check argument to create .c extension file
-        elif [ $2 == '-c' ] && [ $extn != 'cpp' ] && [ $extn != 'h' ] && [ $extn != 'c' ] && [ ! -f "$1.c" ]
+   elif [ $2 == '-c' ] && [ $extn != 'cpp' ] && [ $extn != 'h' ] && [ $extn != 'c' ] && [ ! -f "$1.c" ] && [ $extn != 'java' ]
+
             then
 		touch $1.c
 		echo -e '/*******************************************************\n\t  File name : '$1.c > $1.c 
@@ -52,7 +54,7 @@ if [ "$2" != "" ]
     #echo $1.h  ##For Testing only
 
     #Check argument to create .cpp extension file
-       elif [ $2 == '-cpp' ]  && [ ! -f "$1.cpp" ] && [ $extn != 'cpp' ] && [ $extn != 'h' ] && [ $extn != 'c' ] 
+   elif [ $2 == '-cpp' ]  && [ ! -f "$1.cpp" ] && [ $extn != 'cpp' ] && [ $extn != 'h' ] && [ $extn != 'c' ] && [ $extn != 'java' ]
             then
 		touch $1.cpp
                 echo -e '/*******************************************************\n\t  File name : '$1.cpp > $1.cpp 
@@ -66,7 +68,7 @@ if [ "$2" != "" ]
     #echo $1.h  ##For Testing only
 
     #Check argument to create .h extension file
-        elif [ $2 == '-h' ] && [ $extn != 'cpp' ] && [ $extn != 'h' ] && [ $extn != 'c' ] && [ ! -f "$1.h" ] 
+   elif [ $2 == '-h' ] && [ $extn != 'cpp' ] && [ $extn != 'h' ] && [ $extn != 'c' ] && [ ! -f "$1.h" ]  && [ $extn != 'java' ]
             then 
 		touch $1.h
                 echo -e '/*******************************************************\n\t  File name : '$1.h > $1.h
@@ -76,6 +78,18 @@ if [ "$2" != "" ]
                 echo -e '\n#endif' >> $1.h
                 vim $1.h
     #echo $1.h  ##For Testing only
+    #Check argument to create .cpp extension file
+ elif [ $2 == '-java' ]  && [ ! -f "$1.java" ] && [ $extn != 'cpp' ] && [ $extn != 'h' ] && [ $extn != 'c' ] && [ $extn != 'java' ]
+            then
+		touch $1.java
+                echo -e '/*******************************************************\n\t  File name : '$1.java > $1.java 
+                echo -e '\tAuthor name :' >> $1.java $user >> $1.java 
+                echo -e '\t       Date :' >> $1.java $ti  >> $1.java 
+                echo -e '********************************************************/' >> $1.java
+                echo -e '\nimport java.util.*;' >> $1.java
+                echo -e 'public class' $1  >> $1.java
+                echo -e '{\n\tpublic static void main(String[] args)\n\t{\n\n\t}\n}' >> $1.java
+                vim $1.java
     #If a file already exist with any extension (.c/.cpp/.h ) then open existed file
         else
 		echo -e "\t***************************************\n"
