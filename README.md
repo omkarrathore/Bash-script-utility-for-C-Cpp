@@ -1,6 +1,7 @@
 # C/C++ utility of vim for any linux based distro
 
 ****** After download this file go in the directory where this file is download and execute following command on terminal
+
 * unzip Vim_utility_for_C-Cplusplus-bashScript-master.zip    #Skip this command if not downloaded as the zip file
 * cd Vim_utility_for_C-Cplusplus-bashScript-master 
 * mv Cvim_v3 Cvim
@@ -21,6 +22,7 @@
 
 * Cvim filename -cpp   # for create filename.cpp file
 * Cvim filename -c     # for create filename.c file
+* Cvim filename -java     # for create filename.java file
 * Cvim filename -sh    # for create filename file
 
 *** To run C/C++ file use
