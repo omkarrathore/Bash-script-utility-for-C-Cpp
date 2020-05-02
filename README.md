@@ -4,8 +4,8 @@
 
 * unzip Vim_utility_for_C-Cplusplus-bashScript-master.zip    #Skip this command if not downloaded as the zip file
 * cd Vim_utility_for_C-Cplusplus-bashScript-master 
-* mv Cvim_v3 Cvim
-* mv Crun_v3 Crun
+* mv Cvim_v3 Cvim    #Skip this if you have Cvim file
+* mv Crun_v3 Crun    #Skip this if you have Crun file
 * chmod +x Cvim
 * chmod +x Crun
 * sudo mv Crun Cvim /usr/local/bin
