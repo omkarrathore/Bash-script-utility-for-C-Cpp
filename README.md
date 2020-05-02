@@ -20,9 +20,10 @@
 
 *** To create new C++/C/Bash_script file use
 
-* Cvim filename -cpp   # for create filename.cpp file
-* Cvim filename -c     # for create filename.c file
-* Cvim filename -java     # for create filename.java file
+* Cvim filename.cpp   # for create filename.cpp file
+* Cvim filename.c     # for create filename.c file
+* Cvim filename.java     # for create filename.java file
+
 * Cvim filename -sh    # for create filename file
 
 *** To run C/C++ file use
@@ -34,7 +35,7 @@
 * ./fileName
 
 *** For help in Cvim command use any one from the following
-
+* Cvim
 * Cvim -h 
 * Cvim --h
 * Cvim -help
