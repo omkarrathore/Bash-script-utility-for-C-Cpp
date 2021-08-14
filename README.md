@@ -3,9 +3,7 @@
 ****** After download this file go in the directory where this file is download and execute following command on terminal
 
 * unzip Vim_utility_for_C-Cplusplus-bashScript-master.zip    #Skip this command if not downloaded as the zip file
-* cd Vim_utility_for_C-Cplusplus-bashScript-master 
-* mv Cvim_v3 Cvim    #Skip this if you have Cvim file
-* mv Crun_v3 Crun    #Skip this if you have Crun file
+* Naivagte to downloaded folder and open terminal there.
 * chmod +x Cvim
 * chmod +x Crun
 * sudo mv Crun Cvim /usr/local/bin
